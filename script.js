@@ -31,42 +31,78 @@ computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     
-    humanSelection = humanChoice.toLowerCase();
+    humanChoice = humanChoice.toLowerCase();
     computerChoice = computerChoice;
 
-    if (humanSelection == "rock") {
+    if (humanChoice == "rock") {
         if (computerChoice == "rock") {
-            console.log(`You drew with computer. ${humanSelection} ties with ${computerChoice}`);
+            console.log(`You drew. ${humanChoice} draws against ${computerChoice}`);
         }
         else if (computerChoice == "paper") {
-            console.log(`You lost. ${humanSelection} loses against ${computerChoice}`);
+            console.log(`You lost. ${humanChoice} loses against ${computerChoice}`);
+            if (humanScore > 0) {
+                humanScore -= 1;
+            }
+            computerScore += 1;
         }
         else {
-            console.log(`You won. ${humanSelection} wins against ${computerChoice}`);
+            console.log(`You won. ${humanChoice} wins against ${computerChoice}`);
+            humanScore += 1;
+            if (computerScore > 0) {
+                computerScore -= 1;
+            }
         }
     }
-    else if (humanSelection == "paper") {
+    else if (humanChoice == "paper") {
         if (computerChoice == "rock") {
-            console.log(`You won with computer. ${humanSelection} wins against ${computerChoice}`);
+            console.log(`You won with computer. ${humanChoice} wins against ${computerChoice}`);
+            humanScore += 1;
+            if (computerScore > 0) {
+                computerScore -= 1;
+            }
         }
         else if (computerChoice == "paper") {
-            console.log(`You drew. ${humanSelection} draws against ${computerChoice}`);
+            console.log(`You drew. ${humanChoice} draws against ${computerChoice}`);
         }
         else {
-            console.log(`You lost. ${humanSelection} loses against ${computerChoice}`);
+            console.log(`You lost. ${humanChoice} loses against ${computerChoice}`);
+            if (humanScore > 0) {
+                humanScore -= 1;
+            }
+            computerScore += 1;
         }
     }
     else {
         if (computerChoice == "rock") {
-            console.log(`You lost against computer. ${humanSelection} loses against ${computerChoice}`);
+            console.log(`You lost against computer. ${humanChoice} loses against ${computerChoice}`);
+            if (humanScore > 0) {
+                humanScore -= 1;
+            }
+            computerScore += 1;
         }
         else if (computerChoice == "paper") {
-            console.log(`You won. ${humanSelection} wins against ${computerChoice}`);
+            console.log(`You won. ${humanChoice} wins against ${computerChoice}`);
+            humanScore += 1;
+            if (computerScore > 0) {
+                computerScore -= 1;
+            }
         }
         else {
-            console.log(`You drew. ${humanSelection} draws against ${computerChoice}`);
+            console.log(`You drew. ${humanChoice} draws against ${computerChoice}`);
         }
     }
 }
 
-playRound(getHumanChoice(), getComputerChoice());
+// function to play the game for 5 rounds, 1. start loop 5 times with play round function
+
+function playGame() {
+    for (let i = 0; i < 5; i ++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+        console.log(`The Current Scores are : Your Score [${humanScore}] ||||| Computer Score [${computerScore}]`);
+    }
+}
+
+// global area
