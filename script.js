@@ -28,3 +28,8 @@ function getHumanChoice() {
     return humanChoice;
 }
 console.log(getHumanChoice());
+
+// Declaring and Initializing human score and computer score
+
+humanScore = 0;
+computerScore = 0;
