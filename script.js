@@ -40,52 +40,34 @@ function playRound(humanChoice, computerChoice) {
         }
         else if (computerChoice == "paper") {
             console.log(`You lost. ${humanChoice} loses against ${computerChoice}`);
-            if (humanScore > 0) {
-                humanScore -= 1;
-            }
             computerScore += 1;
         }
         else {
             console.log(`You won. ${humanChoice} wins against ${computerChoice}`);
             humanScore += 1;
-            if (computerScore > 0) {
-                computerScore -= 1;
-            }
         }
     }
     else if (humanChoice == "paper") {
         if (computerChoice == "rock") {
             console.log(`You won with computer. ${humanChoice} wins against ${computerChoice}`);
             humanScore += 1;
-            if (computerScore > 0) {
-                computerScore -= 1;
-            }
         }
         else if (computerChoice == "paper") {
             console.log(`You drew. ${humanChoice} draws against ${computerChoice}`);
         }
         else {
             console.log(`You lost. ${humanChoice} loses against ${computerChoice}`);
-            if (humanScore > 0) {
-                humanScore -= 1;
-            }
             computerScore += 1;
         }
     }
     else {
         if (computerChoice == "rock") {
             console.log(`You lost against computer. ${humanChoice} loses against ${computerChoice}`);
-            if (humanScore > 0) {
-                humanScore -= 1;
-            }
             computerScore += 1;
         }
         else if (computerChoice == "paper") {
             console.log(`You won. ${humanChoice} wins against ${computerChoice}`);
             humanScore += 1;
-            if (computerScore > 0) {
-                computerScore -= 1;
-            }
         }
         else {
             console.log(`You drew. ${humanChoice} draws against ${computerChoice}`);
