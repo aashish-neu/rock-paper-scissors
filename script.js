@@ -24,8 +24,8 @@ function getHumanChoice() {
 }
 // Declaring and Initializing human score and computer score
 
-humanScore = 0;
-computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 // function to tell if computer or human won the round
 
@@ -77,14 +77,24 @@ function playRound(humanChoice, computerChoice) {
 
 // function to play the game for 5 rounds, 1. start loop 5 times with play round function
 
-function playGame() {
-    for (let i = 0; i < 5; i ++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+// to make ui for rps and user plays by pressing buttons
 
-        playRound(humanSelection, computerSelection);
-        console.log(`The Current Scores are : Your Score [${humanScore}] ||||| Computer Score [${computerScore}]`);
-    }
-}
+// function playGame() {
+//     for (let i = 0; i < 5; i ++) {
+//         const humanSelection = getHumanChoice();
+//         const computerSelection = getComputerChoice();
+
+//         playRound(humanSelection, computerSelection);
+//         console.log(`The Current Scores are : Your Score [${humanScore}] ||||| Computer Score [${computerScore}]`);
+//     }
+// }
 
 // global area
+
+// buttons to playround with respective selection of rock, paper or scissors
+
+const rockButton = document.querySelector("#btnRock");
+const paperButton = document.querySelector("#btnPaper");
+const scissorsButton = document.querySelector("#btnScissors");
+
+
