@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.resultSection {
+    /* border: 5px solid brown; */
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.output {
+    /* border: 2px solid yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
