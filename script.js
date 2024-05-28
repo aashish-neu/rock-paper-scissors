@@ -1,7 +1,5 @@
 console.log("Start of the program")
 
-// global area
-
 // Declaring and Initializing human score and computer score
 
 let humanScore = 0;
@@ -32,10 +30,6 @@ currentResult.innerText = "Finding Results........";
 
 const finalOutcomeConatiner = document.querySelector(".final-outcome-container");
 
-// resultSection.textContent = "Let's see who won!!!";
-// const output = document.querySelector(".output");
-// output.textContent = "needed to be added";
-
 
 // to playround when button is pressed
 
@@ -64,22 +58,11 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-// function to get human choice
-// changed -- removed for ui change
-
-// function getHumanChoice() {
-//     humanChoice = prompt("Choose between Rock, Paper or Scissors");
-//     console.log(humanChoice);
-//     return humanChoice;
-// }
-
 
 // function to tell if computer or human won the round
 
 function playRound(humanChoice, computerChoice) {
-    
-    // humanChoice = humanChoice.toLowerCase();
-    // computerChoice = computerChoice; changed
+
     // adding code to get computer choice here instead of outside of function
     // changing console.logs to DOM methods
     computerChoice = getComputerChoice();
@@ -169,7 +152,7 @@ function playRound(humanChoice, computerChoice) {
         paperButton.setAttribute("disabled", "true");
         scissorsButton.setAttribute("disabled", "true");
     } 
-    
+
     else if (computerScore === 5) {
         const finalOutcomeHeader = document.createElement("h3");
         finalOutcomeHeader.classList.add = "header3";
@@ -190,7 +173,5 @@ function playRound(humanChoice, computerChoice) {
     } 
     else {
         finalOutcome.innerText = "Error Error";
-    }
-
-    
+    }   
 }
