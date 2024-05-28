@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 25px;
+    gap: 25px;
 }
 
 .output {
@@ -27,4 +28,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.final-outcome-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
